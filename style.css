@@ -1,0 +1,150 @@
+.attribution { 
+    font-size: 16px; text-align: center; 
+
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Raleway:wght@200&display=swap');
+
+:root{
+--Very-dark-blue-main: hsl(217, 54%, 11%);
+--Very-dark-blue-card: hsl(216, 50%, 16%);
+--Very-dark-blue-line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-size: 18px;
+    background-color: var(--Very-dark-blue-main);
+    font-family: 'Outfit', sans-serif;
+}
+
+img{
+    max-width:100%;
+    border-radius: 5%;
+    
+}
+
+.container{
+    background-color: var(--Very-dark-blue-card);
+    border-radius: 5%;
+    padding: 5%;
+    margin:5% 5% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    font-weight: 300;
+    color: var(--Soft-blue);
+    
+}
+
+a{
+    color: var(--White);
+    text-decoration: none;
+}
+
+.container a:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+h2{
+    color: var(--White);
+    font-weight: 600;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.container h2:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    color: var(--Soft-blue);
+    padding: 5% 0%;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.container ul li:first-child{
+    color: var(--Cyan);
+}
+
+.container ul li{
+    display: flex;
+    align-items: center;
+}
+
+.container ul li img{
+    margin-right: 0.3rem;
+}
+
+.creator{
+    display:flex;
+    align-items: center;
+    justify-content: start;
+    padding-top:5%;
+}
+
+.avatar{
+    width: 3.5rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 1rem;
+    
+}
+
+
+@media (min-width: 500px){
+    .container{
+        width:450px;
+        margin: 1rem auto 1rem;
+    }
+}
+
+.container .img_hover{
+    position: relative;
+}
+
+.container .img_hover div{
+    position: absolute;
+    top:0;
+    background-color: hsl(178, 100%, 50%,.6);
+    width: 100%;
+    height: calc(100% - 5px);
+    z-index: 999;
+    border-radius: 5%;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.container .img_hover div img{
+    position:absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.container .img_hover div:hover{
+    opacity: 1;
+}
